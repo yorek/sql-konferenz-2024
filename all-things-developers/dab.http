@@ -1,0 +1,43 @@
+### Get all sessions
+
+GET http://localhost:5000/api/session/
+
+###
+
+GET http://localhost:5000/api/session/session_id/683984
+
+
+###
+
+GET http://localhost:5000/api/session?$select=session_id,title,language,level
+
+###
+
+GET http://localhost:5000/api/session?$select=session_id,title,language,level&$orderby=level desc
+
+###
+
+GET http://localhost:5000/api/session?$first=5&$select=session_id,title,language,level&$orderby=level desc
+
+
+### 
+
+POST http://localhost:5000/api/session/
+
+{
+    "session_id": 999999,
+    "title": "Azure SQL ❤ AI",
+    "description": "some text here",
+    "details": {
+        "owner": [
+            "Davide Mauri"
+        ],
+        "language": "English",
+        "track": "Artificial Intelligence",
+        "level": 300
+    },
+    "imported_by": "damauri@microsoft.com",
+    "imported_on": "2024-09-24"
+}
+
+

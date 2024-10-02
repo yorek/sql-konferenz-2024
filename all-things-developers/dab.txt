@@ -1,0 +1,8 @@
+dab init --database-type mssql --host-mode development --connection-string "@env('MSSQL')"
+
+dab add Session --source "dbo.sessions" --permissions "anonymous:*" --rest "session"
+
+http://localhost:5000/swagger
+
+http://localhost:5000/graphql
+
